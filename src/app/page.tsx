@@ -1,69 +1,191 @@
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import BannerCarousel from "@/components/BannerCarousel";
 
 export default function Home() {
+  const heroBanners = [
+    "/banners/banner-1.jpg",
+    "/banners/banner-2.jpg",
+    "/banners/banner-3.jpg",
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="bg-white w-full">
+      {/* Top Hero Carousel using Swiper.js - Gap at bottom */}
+      <section className="w-full mb-1 sm:mb-2 md:mb-2">
+        <BannerCarousel
+          images={heroBanners}
+          aspectRatioClass="aspect-[1920/750]"
+          className="rounded-none w-full"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      {/* Main Category Sections Container - Zero vertical gap between sections */}
+      <div className="w-full flex flex-col gap-0 p-0 m-0">
+        {/* ========================================================================= */}
+        {/* SECTION 1: REFRIGERATOR (Single Full Image with click to category page) */}
+        {/* ========================================================================= */}
+        <section className="w-full p-0 m-0">
+          <Link
+            href="/category/refrigerator"
+            className="group block relative w-full overflow-hidden rounded-none bg-white hover:opacity-95 transition-all duration-300 cursor-pointer"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <div className="relative w-full aspect-[1920/750]">
+              <Image
+                src="/category_images/refrigerator.jpg"
+                alt="Walton Refrigerator"
+                fill
+                priority
+                className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
+                sizes="(max-width: 1920px) 100vw, 1920px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center md:justify-start p-4 sm:p-6 text-center md:text-left">
+                <span className="inline-flex items-center gap-2 text-white font-bold text-sm sm:text-base bg-blue-600 px-4 py-2 rounded-none shadow-md">
+                  Explore Refrigerators <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </div>
+          </Link>
+        </section>
+
+        {/* ========================================================================= */}
+        {/* SECTION 2: AIR CONDITIONER (Reference Image 1: Split Left Text / Right Image) */}
+        {/* ========================================================================= */}
+        <section className="w-full p-0 m-0">
+          <Link
+            href="/category/air-conditioner"
+            className="group block bg-white rounded-none hover:bg-gray-50/50 transition-all duration-300 overflow-hidden cursor-pointer"
           >
-            Documentation
-          </a>
-        </div>
-      </main>
+            <div className="flex flex-col md:flex-row items-stretch w-full bg-white">
+              {/* Left Column: Text Container (Centered on Mobile, Left-aligned on Desktop) */}
+              <div className="w-full md:w-[45%] p-6 sm:p-10 lg:p-14 flex flex-col justify-center bg-white text-center md:text-left">
+                <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-700 tracking-wide mb-2">
+                  Energy Efficient & Eco Friendly
+                </p>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4 group-hover:text-blue-600 transition-colors">
+                  Air Conditioner
+                </h2>
+                <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed font-normal">
+                  Walton Air Conditioner is integrated with intelligent inverter
+                  technology that saves maximum electricity.
+                </p>
+              </div>
+
+              {/* Right Column: Image with exact 1050x750 aspect ratio - 100% uncropped */}
+              <div className="w-full md:w-[55%] relative aspect-[1050/750] bg-white">
+                <Image
+                  src="/category_images/air-conditionar.jpg"
+                  alt="Walton Air Conditioner"
+                  fill
+                  className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
+                  sizes="(max-width: 768px) 100vw, 55vw"
+                />
+              </div>
+            </div>
+          </Link>
+        </section>
+
+        {/* ========================================================================= */}
+        {/* SECTION 3: TV (Single Image with click to category page) */}
+        {/* ========================================================================= */}
+        <section className="w-full p-0 m-0">
+          <Link
+            href="/category/tv"
+            className="group block relative w-full overflow-hidden rounded-none bg-white hover:opacity-95 transition-all duration-300 cursor-pointer"
+          >
+            <div className="relative w-full aspect-[1920/750]">
+              <Image
+                src="/category_images/tv.jpg"
+                alt="Walton Television"
+                fill
+                className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
+                sizes="(max-width: 1920px) 100vw, 1920px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center md:justify-start p-4 sm:p-6 text-center md:text-left">
+                <span className="inline-flex items-center gap-2 text-white font-bold text-sm sm:text-base bg-blue-600 px-4 py-2 rounded-none shadow-md">
+                  Explore Televisions <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </div>
+          </Link>
+        </section>
+
+        {/* ========================================================================= */}
+        {/* SECTION 4: WASHING MACHINE (Split Left Text / Right Image) */}
+        {/* ========================================================================= */}
+        <section className="w-full p-0 m-0">
+          <Link
+            href="/category/washing-machine"
+            className="group block bg-white rounded-none hover:bg-gray-50/50 transition-all duration-300 overflow-hidden cursor-pointer"
+          >
+            <div className="flex flex-col md:flex-row items-stretch w-full bg-white">
+              {/* Left Column: Text Container (Centered on Mobile, Left-aligned on Desktop) */}
+              <div className="w-full md:w-[45%] p-6 sm:p-10 lg:p-14 flex flex-col justify-center bg-white text-center md:text-left">
+                <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-700 tracking-wide mb-2">
+                  Smart Cleaning & Fabric Care
+                </p>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4 group-hover:text-blue-600 transition-colors">
+                  Washing Machine
+                </h2>
+                <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed font-normal">
+                  Walton Smart Inverter Washing Machines ensure superior fabric
+                  care, whisper-quiet operation, and ultimate energy efficiency.
+                </p>
+              </div>
+
+              {/* Right Column: Image with exact 1050x750 aspect ratio - 100% uncropped */}
+              <div className="w-full md:w-[55%] relative aspect-[1050/750] bg-white">
+                <Image
+                  src="/category_images/washing-machine.jpg"
+                  alt="Walton Washing Machine"
+                  fill
+                  className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
+                  sizes="(max-width: 768px) 100vw, 55vw"
+                />
+              </div>
+            </div>
+          </Link>
+        </section>
+
+        {/* ========================================================================= */}
+        {/* SECTION 5: MICROWAVE OVEN (Split Left Image / Right Text) */}
+        {/* ========================================================================= */}
+        <section className="w-full p-0 m-0">
+          <Link
+            href="/category/microwave"
+            className="group block bg-white rounded-none hover:bg-gray-50/50 transition-all duration-300 overflow-hidden cursor-pointer"
+          >
+            <div className="flex flex-col md:flex-row items-stretch w-full bg-white">
+              {/* Left Column: Image with exact 1050x750 aspect ratio - 100% uncropped */}
+              <div className="w-full md:w-[55%] relative aspect-[1050/750] bg-white order-2 md:order-1">
+                <Image
+                  src="/category_images/microwave.jpg"
+                  alt="Walton Microwave Oven"
+                  fill
+                  className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
+                  sizes="(max-width: 768px) 100vw, 55vw"
+                />
+              </div>
+
+              {/* Right Column: Text Container (Centered on Mobile, Left-aligned on Desktop) */}
+              <div className="w-full md:w-[45%] p-6 sm:p-10 lg:p-14 flex flex-col justify-center bg-white order-1 md:order-2 text-center md:text-left">
+                <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-700 tracking-wide mb-2">
+                  Modern Cooking & Healthy Living
+                </p>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4 group-hover:text-blue-600 transition-colors">
+                  Microwave Oven
+                </h2>
+                <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed font-normal">
+                  Experience seamless cooking, fast defrosting, and gourmet
+                  baking with Walton smart multi-functional Microwave Ovens.
+                </p>
+              </div>
+            </div>
+          </Link>
+        </section>
+      </div>
     </div>
   );
 }
