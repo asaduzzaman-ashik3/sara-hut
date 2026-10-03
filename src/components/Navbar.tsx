@@ -15,6 +15,7 @@ import {
   Wind,
   Flame,
   WashingMachine as WashingMachineIcon,
+  Home as HomeIcon,
 } from "lucide-react";
 import WaltonLogo from "./WaltonLogo";
 import { categoriesList, Product, CategoryData } from "@/data/products";
@@ -98,6 +99,8 @@ export default function Navbar() {
         return <WashingMachineIcon className="w-5 h-5 text-blue-600" />;
       case "microwave":
         return <Flame className="w-5 h-5 text-blue-600" />;
+      case "home-applies":
+        return <HomeIcon className="w-5 h-5 text-blue-600" />;
       default:
         return null;
     }

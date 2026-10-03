@@ -56,6 +56,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           alt={`${category.title} Banner`}
           fill
           priority
+          unoptimized
           sizes="(max-width: 1024px) 100vw, 70vw"
           className="object-cover w-full h-full"
         />

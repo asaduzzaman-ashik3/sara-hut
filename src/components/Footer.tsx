@@ -3,9 +3,9 @@ import WaltonLogo from "./WaltonLogo";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-white pt-16 pb-8 border-t border-gray-100 overflow-hidden">
+    <footer className="relative w-full bg-gray-100 pt-16 pb-8 mt-2 border-t border-gray-200 overflow-hidden">
       {/* Subtle top organic wave contour like Reference Image 4 */}
-      <div className="absolute top-0 inset-x-0 -translate-y-full overflow-hidden leading-none pointer-events-none text-white">
+      <div className="absolute top-0 inset-x-0 -translate-y-full overflow-hidden leading-none pointer-events-none text-gray-100">
         <svg
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
@@ -13,12 +13,12 @@ export default function Footer() {
         >
           <path
             d="M0,0 C150,90 350,-40 500,45 C650,130 900,10 1200,40 L1200,120 L0,120 Z"
-            fill="#ffffff"
+            fill="#f3f4f6"
           />
         </svg>
       </div>
 
-      <div className="w-full px-4 sm:px-6">
+      <div className="w-full lg:w-[70%] mx-auto px-4 sm:px-6">
         {/* Centered Brand Logo at the top of footer */}
         <div className="flex justify-center mb-12">
           <WaltonLogo size="lg" />

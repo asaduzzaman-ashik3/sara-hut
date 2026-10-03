@@ -14,12 +14,14 @@ interface BannerCarouselProps {
   images: string[];
   className?: string;
   aspectRatioClass?: string;
+  autoplayDelay?: number;
 }
 
 export default function BannerCarousel({
   images,
   className = "",
   aspectRatioClass = "aspect-[1920/750]",
+  autoplayDelay = 5000,
 }: BannerCarouselProps) {
   const swiperRef = useRef<SwiperType | null>(null);
 
@@ -32,9 +34,9 @@ export default function BannerCarousel({
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
-        speed={600}
+        speed={800}
         autoplay={{
-          delay: 4500,
+          delay: autoplayDelay,
           disableOnInteraction: false,
         }}
         pagination={{

@@ -39,9 +39,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white text-gray-900 selection:bg-blue-600 selection:text-white">
         <Navbar />
         <main className="flex-1 bg-white w-full lg:w-[70%] mx-auto">{children}</main>
-        <div className="w-full lg:w-[70%] mx-auto bg-white">
-          <Footer />
-        </div>
+        <Footer />
       </body>
     </html>
   );

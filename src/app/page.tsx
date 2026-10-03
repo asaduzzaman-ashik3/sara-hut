@@ -61,11 +61,11 @@ export default function Home() {
           >
             <div className="flex flex-col md:flex-row items-stretch w-full bg-white">
               {/* Left Column: Text Container (Centered on Mobile, Left-aligned on Desktop) */}
-              <div className="w-full md:w-[45%] p-6 sm:p-10 lg:p-14 flex flex-col justify-center bg-white text-center md:text-left">
+              <div className="w-full md:w-[45%] p-6 sm:p-10 lg:p-14 flex flex-col justify-center bg-gray-100 text-center md:text-left">
                 <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-700 tracking-wide mb-2">
                   Energy Efficient & Eco Friendly
                 </p>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4 group-hover:text-blue-600 transition-colors">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4">
                   Air Conditioner
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed font-normal">
@@ -125,11 +125,11 @@ export default function Home() {
           >
             <div className="flex flex-col md:flex-row items-stretch w-full bg-white">
               {/* Left Column: Text Container (Centered on Mobile, Left-aligned on Desktop) */}
-              <div className="w-full md:w-[45%] p-6 sm:p-10 lg:p-14 flex flex-col justify-center bg-white text-center md:text-left">
+              <div className="w-full md:w-[45%] p-6 sm:p-10 lg:p-14 flex flex-col justify-center bg-gray-100 text-center md:text-left">
                 <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-700 tracking-wide mb-2">
                   Smart Cleaning & Fabric Care
                 </p>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4 group-hover:text-blue-600 transition-colors">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4">
                   Washing Machine
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed font-normal">
@@ -175,17 +175,54 @@ export default function Home() {
               </div>
 
               {/* Right Column: Text Container (Centered on Mobile, Left-aligned on Desktop) */}
-              <div className="w-full md:w-[45%] p-6 sm:p-10 lg:p-14 flex flex-col justify-center bg-white order-1 md:order-2 text-center md:text-left">
+              <div className="w-full md:w-[45%] p-6 sm:p-10 lg:p-14 flex flex-col justify-center bg-gray-100 order-1 md:order-2 text-center md:text-left">
                 <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-700 tracking-wide mb-2">
                   Modern Cooking & Healthy Living
                 </p>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4 group-hover:text-blue-600 transition-colors">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4">
                   Microwave Oven
                 </h2>
                 <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed font-normal">
                   Experience seamless cooking, fast defrosting, and gourmet
                   baking with Walton smart multi-functional Microwave Ovens.
                 </p>
+              </div>
+            </div>
+          </Link>
+        </section>
+
+        {/* ========================================================================= */}
+        {/* SECTION 6: HOME APPLIANCES (Split Left Text / Right Image) */}
+        {/* ========================================================================= */}
+        <section className="w-full p-0 m-0">
+          <Link
+            href="/category/home-applies"
+            className="group block bg-white rounded-none hover:bg-gray-50/50 transition-all duration-300 overflow-hidden cursor-pointer"
+          >
+            <div className="flex flex-col md:flex-row items-stretch w-full bg-white">
+              {/* Left Column: Text Container (Centered on Mobile, Left-aligned on Desktop) */}
+              <div className="w-full md:w-[45%] p-6 sm:p-10 lg:p-14 flex flex-col justify-center bg-gray-100 text-center md:text-left">
+                <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-700 tracking-wide mb-2">
+                  Everyday Comfort & Smart Living
+                </p>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4">
+                  Home Appliances
+                </h2>
+                <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed font-normal">
+                  Upgrade your living space with Walton&apos;s innovative, reliable, and energy-efficient Home Appliances designed for everyday ease and convenience.
+                </p>
+              </div>
+
+              {/* Right Column: Image with exact 1050x750 aspect ratio - 100% uncropped */}
+              <div className="w-full md:w-[55%] relative aspect-[1050/750] bg-white">
+                <Image
+                  src="/category_images/home-applies.webp"
+                  alt="Walton Home Appliances"
+                  fill
+                  unoptimized
+                  className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
+                  sizes="(max-width: 768px) 100vw, 55vw"
+                />
               </div>
             </div>
           </Link>
