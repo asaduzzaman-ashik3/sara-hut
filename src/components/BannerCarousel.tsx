@@ -51,6 +51,7 @@ export default function BannerCarousel({
                 alt={`Walton Banner slide ${index + 1}`}
                 fill
                 priority={index === 0}
+                unoptimized
                 className="object-cover object-center"
                 sizes="(max-width: 1920px) 100vw, 1920px"
               />

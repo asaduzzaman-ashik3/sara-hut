@@ -6,9 +6,9 @@ import BannerCarousel from "@/components/BannerCarousel";
 
 export default function Home() {
   const heroBanners = [
-    "/banners/banner-1.jpg",
-    "/banners/banner-2.jpg",
-    "/banners/banner-3.jpg",
+    "/banners/banner-1.webp",
+    "/banners/banner-2.webp",
+    "/banners/banner-3.webp",
   ];
 
   return (
@@ -34,10 +34,11 @@ export default function Home() {
           >
             <div className="relative w-full aspect-[1920/750]">
               <Image
-                src="/category_images/refrigerator.jpg"
+                src="/category_images/refrigerator.webp"
                 alt="Walton Refrigerator"
                 fill
                 priority
+                unoptimized
                 className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
                 sizes="(max-width: 1920px) 100vw, 1920px"
               />
@@ -76,9 +77,10 @@ export default function Home() {
               {/* Right Column: Image with exact 1050x750 aspect ratio - 100% uncropped */}
               <div className="w-full md:w-[55%] relative aspect-[1050/750] bg-white">
                 <Image
-                  src="/category_images/air-conditionar.jpg"
+                  src="/category_images/air-conditionar.webp"
                   alt="Walton Air Conditioner"
                   fill
+                  unoptimized
                   className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
                   sizes="(max-width: 768px) 100vw, 55vw"
                 />
@@ -97,9 +99,10 @@ export default function Home() {
           >
             <div className="relative w-full aspect-[1920/750]">
               <Image
-                src="/category_images/tv.jpg"
+                src="/category_images/tv.webp"
                 alt="Walton Television"
                 fill
+                unoptimized
                 className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
                 sizes="(max-width: 1920px) 100vw, 1920px"
               />
@@ -138,9 +141,10 @@ export default function Home() {
               {/* Right Column: Image with exact 1050x750 aspect ratio - 100% uncropped */}
               <div className="w-full md:w-[55%] relative aspect-[1050/750] bg-white">
                 <Image
-                  src="/category_images/washing-machine.jpg"
+                  src="/category_images/washing-machine.webp"
                   alt="Walton Washing Machine"
                   fill
+                  unoptimized
                   className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
                   sizes="(max-width: 768px) 100vw, 55vw"
                 />
@@ -161,9 +165,10 @@ export default function Home() {
               {/* Left Column: Image with exact 1050x750 aspect ratio - 100% uncropped */}
               <div className="w-full md:w-[55%] relative aspect-[1050/750] bg-white order-2 md:order-1">
                 <Image
-                  src="/category_images/microwave.jpg"
+                  src="/category_images/microwave.webp"
                   alt="Walton Microwave Oven"
                   fill
+                  unoptimized
                   className="object-cover object-center rounded-none transition-transform duration-500 group-hover:scale-[1.01]"
                   sizes="(max-width: 768px) 100vw, 55vw"
                 />

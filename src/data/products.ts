@@ -28,12 +28,12 @@ export const categoriesData: Record<string, CategoryData> = {
     title: "Refrigerator",
     tagline: "Intelligent Inverter & Direct Cool Refrigerators",
     description: "Keep your food fresher for longer with Walton's advanced intelligent inverter and frost-free refrigeration technology.",
-    landingImage: "/category_images/refrigerator.jpg",
+    landingImage: "/category_images/refrigerator.webp",
     bannerImage: "/category_pages_banner/refrigerator.jpeg",
     bannerImages: [
       "/category_pages_banner/refrigerator.jpeg",
-      "/banners/banner-1.jpg",
-      "/banners/banner-2.jpg",
+      "/banners/banner-1.webp",
+      "/banners/banner-2.webp",
     ],
     products: [
       {
@@ -83,12 +83,12 @@ export const categoriesData: Record<string, CategoryData> = {
     title: "Air Conditioner",
     tagline: "Energy Efficient & Eco Friendly",
     description: "Walton Air Conditioner is integrated with intelligent inverter technology that saves maximum electricity.",
-    landingImage: "/category_images/air-conditionar.jpg",
+    landingImage: "/category_images/air-conditionar.webp",
     bannerImage: "/category_pages_banner/air_conditioner.jpg",
     bannerImages: [
       "/category_pages_banner/air_conditioner.jpg",
-      "/banners/banner-2.jpg",
-      "/banners/banner-3.jpg",
+      "/banners/banner-2.webp",
+      "/banners/banner-3.webp",
     ],
     products: [
       {
@@ -138,12 +138,12 @@ export const categoriesData: Record<string, CategoryData> = {
     title: "Television",
     tagline: "Immersive 4K Google TV & Smart Visuals",
     description: "Experience ultra-high definition clarity, vivid colors, and Dolby Atmos audio with Walton Smart 4K Google TVs.",
-    landingImage: "/category_images/tv.jpg",
+    landingImage: "/category_images/tv.webp",
     bannerImage: "/category_pages_banner/tv.jpg",
     bannerImages: [
       "/category_pages_banner/tv.jpg",
-      "/banners/banner-3.jpg",
-      "/banners/banner-1.jpg",
+      "/banners/banner-3.webp",
+      "/banners/banner-1.webp",
     ],
     products: [
       {
@@ -193,12 +193,12 @@ export const categoriesData: Record<string, CategoryData> = {
     title: "Washing Machine",
     tagline: "Smart Cleaning & Advanced Fabric Care",
     description: "Walton Smart Inverter Washing Machines ensure superior fabric care, high energy efficiency, and ultra-quiet washing cycles.",
-    landingImage: "/category_images/washing-machine.jpg",
+    landingImage: "/category_images/washing-machine.webp",
     bannerImage: "/category_pages_banner/washing-mchine.jpg",
     bannerImages: [
       "/category_pages_banner/washing-mchine.jpg",
-      "/banners/banner-1.jpg",
-      "/banners/banner-2.jpg",
+      "/banners/banner-1.webp",
+      "/banners/banner-2.webp",
     ],
     products: [
       {
@@ -248,12 +248,12 @@ export const categoriesData: Record<string, CategoryData> = {
     title: "Microwave Oven",
     tagline: "Modern Cooking & Healthy Living",
     description: "Experience seamless cooking, quick defrosting, and grill baking with Walton smart multi-functional Microwave Ovens.",
-    landingImage: "/category_images/microwave.jpg",
+    landingImage: "/category_images/microwave.webp",
     bannerImage: "/category_pages_banner/microwave.jpg",
     bannerImages: [
       "/category_pages_banner/microwave.jpg",
-      "/banners/banner-3.jpg",
-      "/banners/banner-2.jpg",
+      "/banners/banner-3.webp",
+      "/banners/banner-2.webp",
     ],
     products: [
       {
